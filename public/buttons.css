@@ -1,0 +1,28 @@
+.btn {
+  border:0px none;
+  border-radius: 3%;
+  padding: 10px 15px;
+  color: papayawhip;
+  cursor:pointer;
+  font-family: 'Special Elite', cursive;
+}
+
+.btn--danger {
+  background-color: silver;
+}
+
+.btn--danger:hover {
+  background-color: #730000;
+}
+
+.btn--action:hover {
+  background-color: #000000;
+}
+
+.btn--action {
+  background-color: turquoise;
+}
+
+.btn--wrapper {
+  margin: 0px 0px 25px 0px;
+}
