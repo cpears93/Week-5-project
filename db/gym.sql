@@ -21,4 +21,4 @@ CREATE TABLE fitness_class
   id SERIAL primary key
   customer_id INT references customers(id),
   instructor_id INT references instructors(id)
-)
+);
