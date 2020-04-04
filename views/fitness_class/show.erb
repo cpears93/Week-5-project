@@ -1,0 +1,9 @@
+<h1><%= @customer.name %> (customer)</h1>
+
+<h3>Joined:</h3>
+
+<ul>
+  <% @instructor.fitness_class.each do |instructor| %>
+  <li><%= instructor.name %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,13 @@
+<h1>Fitness Class</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for fitness in @fitness_class %>
+  <tr>
+    <td><a href="/fitness/<%= fitness.id %>"><%= fitness.name %></a></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table>

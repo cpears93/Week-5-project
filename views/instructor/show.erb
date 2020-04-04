@@ -1,0 +1,11 @@
+<h1>Customer <%= @customer.name %></h1>
+
+<p>Type: <%= @customer.type %></p>
+
+<h3>Member:</h3>
+
+<ul>
+  <% @customer.fitness_class.each do |fitness_class| %>
+  <li><%= fitness_class.name %></li>
+  <% end %>
+</ul>

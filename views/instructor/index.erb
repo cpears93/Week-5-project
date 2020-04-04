@@ -1,0 +1,16 @@
+<h1>Instructor</h1>
+
+<table>
+  <tr>
+    <th>first_name</th>
+    <th></th>
+    <th>fitness_class</th>
+  </tr>
+  <% for instructor in @instructor %>
+  <tr>
+    <td><a href="/instructor/<%= instructor.id %>"><%= instructor.name %></a></td>
+    <td>|</td>
+    <td><%= fitness_class.type %></td>
+  </tr>
+  <% end %>
+</table>

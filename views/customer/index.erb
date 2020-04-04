@@ -1,0 +1,18 @@
+<h1>Customer</h1>
+
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/Customer/new">Existing Customers</a>
+</p>
+
+<ul>
+  <% for customer in @customers %>
+  <li>
+  <p><%= customer.instructor.name %> <%= @actions.sample %> <%= customer.fitness_class.name %> </p>
+    <p>
+      <form action="/customer/<%= customer.id %>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
+  <% end %>
+</ul>
