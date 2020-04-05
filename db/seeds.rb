@@ -8,8 +8,8 @@ Instructor.delete_all()
 Fitness.delete_all()
 
 customer1 = Customer.new({
-  "first_name" => "Finn",
-  "last_name" => "Russell"
+  "first_name" => "Bernard",
+  "last_name" => "Lowe"
   "age" => 31,
   "gender" => "Male"
   })
@@ -17,8 +17,8 @@ customer1 = Customer.new({
 customer1.save()
 
 customer2 = Customer.new({
-  "first_name" => "Finn",
-  "last_name" => "Russell",
+  "first_name" => "x",
+  "last_name" => "x",
   "age" => 29,
   "gender" => "Female"
   })
@@ -26,8 +26,8 @@ customer2 = Customer.new({
 customer2.save()
 
 customer3 = Customer.new({
-  "first_name" => "Finn",
-  "last_name" => "Russell",
+  "first_name" => "Arnold",
+  "last_name" => "Weber",
   "age" => 26,
   "gender" => "Female"
   })
@@ -35,8 +35,8 @@ customer3 = Customer.new({
 customer3.save()
 
 customer4 = Customer.new({
-  "first_name" => "Finn",
-  "last_name" => "Russell",
+  "first_name" => "x",
+  "last_name" => "x",
   "age" => 32,
   "gender" => "Male"
   })
@@ -45,29 +45,29 @@ customer4.save()
 
 
 insructor1 = Instructor.new({
-  "first_name" => "",
-  "fitness_class" => "spin"
+  "instructor_name" => "Jack",
+  "fitness_class" => "Spin"
   })
 
 instructor1.save()
 
 instructor2 = Instructor.new({
-  "first_name" => "",
+  "insructor_name" => "Victor",
   "fitness_class" => "Rowing"
   })
 
 instructor2.save()
 
 instructor3 = Instructor.new({
-  "first_name" => "",
+  "instructor_name" => "Tam",
   "fitness_class" => "Kickboxing"
   })
 
 instructor3.save()
 
 instructor4 = Instructor.new({
-  "first_name" => "",
-  "fitness_class" => ""
+  "instructor_name" => "Winston",
+  "fitness_class" => "Weightlifting"
   })
 
 instructor4.save()
