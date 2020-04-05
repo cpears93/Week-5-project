@@ -2,7 +2,7 @@ require_relative( '../db/sql_runner')
 
 class Customer
 
-  attr_reader( :zombie_id, :victim_id, :id )
+  attr_reader( :fitness_id, :insructor_id, :id )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -60,4 +60,4 @@ class Customer
     SqlRunner.run( sql, values )
   end
 
-end  
+end
