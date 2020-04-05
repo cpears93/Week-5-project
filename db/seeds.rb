@@ -8,8 +8,8 @@ Instructor.delete_all()
 Fitness.delete_all()
 
 customer1 = Customer.new({
-  "first_name" => "Bernard",
-  "last_name" => "Lowe"
+  "first_name" => "Ted",
+  "last_name" => "Crilly"
   "age" => 31,
   "gender" => "Male"
   })
@@ -17,8 +17,8 @@ customer1 = Customer.new({
 customer1.save()
 
 customer2 = Customer.new({
-  "first_name" => "x",
-  "last_name" => "x",
+  "first_name" => "Joan",
+  "last_name" => "Doyle",
   "age" => 29,
   "gender" => "Female"
   })
@@ -26,17 +26,17 @@ customer2 = Customer.new({
 customer2.save()
 
 customer3 = Customer.new({
-  "first_name" => "Arnold",
-  "last_name" => "Weber",
+  "first_name" => "Dougal",
+  "last_name" => "McGuire",
   "age" => 26,
-  "gender" => "Female"
+  "gender" => "Male"
   })
 
 customer3.save()
 
 customer4 = Customer.new({
-  "first_name" => "x",
-  "last_name" => "x",
+  "first_name" => "Jack",
+  "last_name" => "Hackett",
   "age" => 32,
   "gender" => "Male"
   })
