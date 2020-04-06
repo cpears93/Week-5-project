@@ -10,5 +10,5 @@ end
 
 get 'fitness/:id' do
   @fitness_class = Fitness.find(params['id'].to_i)
-  erb (:"victims/show")
+  erb (:"fitness/show")
 end

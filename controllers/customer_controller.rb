@@ -24,5 +24,5 @@ end
 
 post '/customers/:id/delete' do
   Customers.destroy(params[:id])
-  redirect to("/bitings")
+  redirect to("/customers")
 end
