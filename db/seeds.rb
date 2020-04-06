@@ -9,7 +9,7 @@ Fitness.delete_all()
 
 customer1 = Customer.new({
   "first_name" => "Ted",
-  "last_name" => "Crilly"
+  "last_name" => "Crilly",
   "age" => 31,
   "gender" => "Male"
   })
