@@ -1,5 +1,5 @@
 require_relative( "../models/customers.rb" )
-require_relative( "../models/instructor.rb" )
+require_relative( "../models/instructors.rb" )
 require_relative( "../models/fitness.rb" )
 require("pry-byebug")
 
