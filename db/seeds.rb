@@ -100,3 +100,6 @@ class4 = Class.new({
   })
 
 class4.save()
+
+binding.pry
+nil
