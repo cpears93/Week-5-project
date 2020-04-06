@@ -1,9 +1,9 @@
 require( 'sinatra')
 require( 'sinatra/contrib/all')
 require( 'pry-byebug')
-require_relative( '../models/x.rb' )
-require_relative( '../models/y.rb' )
-require_relative( '../models/z.rb' )
+require_relative( '../models/customers.rb' )
+require_relative( '../models/fitness.rb' )
+require_relative( '../models/instructors.rb' )
 also_reload( '../models/*' )
 
 get '/customers' do
