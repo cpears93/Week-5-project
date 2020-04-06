@@ -1,6 +1,6 @@
 require_relative( "../models/customers.rb" )
 require_relative( "../models/instructor.rb" )
-require_relative( "../models/fitness_class.rb" )
+require_relative( "../models/fitness.rb" )
 require("pry-byebug")
 
 Customer.delete_all()
