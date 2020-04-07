@@ -25,8 +25,8 @@ class Fitness
     @id = results.first()['id'].to_i
   end
 
-  def instructor()
-    sql = "SELECT z.* FROM customer z INNER JOIN instructors b ON B.instructor_id = z.id WHERE b.fitness_id = $1;"
+  def customer()
+    sql = "SELECT z.* FROM customer z INNER JOIN fitness b ON B.customer_id = z.id WHERE b.fitness_id = $1;"
     values = [@id]
     results = SqlRunner.run(sql, values)
     return results.map { |instructor| Instructor.new(instructor) }
