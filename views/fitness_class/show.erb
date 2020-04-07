@@ -1,7 +1,7 @@
-<h1>Fitness Class</h1>
+<h1>Fitness <%= @fitness.name %></h1>
 
-<form action="/fitness_class" method="POST">
-
-  <p><label for="lesson-name">Lesson Name:</label>
-    <input id="lesson_name" type="text" name="lesson_name" required/></p>
-</form>
+<ul>
+  <% @fitness.lesson_name.each do |lesson_name| %>
+  <li><%= lesson_name.name %></li>
+  <% end %>
+</ul>
