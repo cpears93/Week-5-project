@@ -1,7 +1,7 @@
 <h1>Customer</h1>
 
 <p class="btn--wrapper">
-  <a class="btn btn--action" href="/fitness_class/shpw">Book a Class!!!</a>
+  <a class="btn btn--action" href="/fitness/show">Book a Class!!!</a>
 </p>
 
 <ul>
@@ -9,7 +9,7 @@
   <li>
   <p><%= fitness_class.lesson_name %></p>
     <p>
-      <form action="/fitness_class/<%= fitness_class.id %>/delete" method="POST">
+      <form action="/fitness/<%= fitness.id %>/delete" method="POST">
         <input class="btn btn--danger" type="submit" value="delete" />
       </form>
     </p>

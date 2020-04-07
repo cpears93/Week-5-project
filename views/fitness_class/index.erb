@@ -1,13 +1,19 @@
 <h1>Fitness Class</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/fitness_class/show">Fitness Class</a>
+</p>
+
+<ul>
   <% for fitness in @fitness_class %>
-  <tr>
-    <td><a href="/fitness/<%= fitness.id %>"><%= fitness.name %></a></td>
-    <td>|</td>
-  </tr>
+  <li>
+  <p><%= fitness_class.lesson_name %>
+  </p>
+    <p>
+      <form action="/fitness_class/<%= fitness_class.id %>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
   <% end %>
-</table>
+</ul>
