@@ -1,23 +1,18 @@
 <h1>New Customer</h1>
 
-<form action="/customer" method="post">
-  <label>
-  Select an instructor:
-    <select name="instructor_id">
-      <% for instructor in @instructors %>
-      <option value="<%= instructor.id %>"><%= instructor.name %></option>
-      <% end %>
-    </select>
-  </label>
+<form action="/customer" method="POST">
 
-  <label>
-    Select a fitness class:
-    <select name="fitness_class_id">
-      <% for fitness_class in @fitness_class %>
-      <option value="<%= fitness.id %>"><%= fitness.name %></option>
-      <% end %>
-    </select>
-  </label>
+  <p><label for="first-name">First Name:</label>
+    <input id="first_name" type="text" name="first_name" required/></p>
 
-  <input class="btn btn--action" type='submit' value="Joined!">
+  <p><label for="last-name">Last Name:</label>
+    <input id="last-name" type="text" name="last_name" required/></p>
+
+  <p><label for="age">Age:</label>
+    <input id="age" type="number" name="age" required /></p>
+
+  <p><label for="gender">Gender:</label>
+    <input id="gender" type="text" gender="gender" required/></p>  
+
+  <input type='submit' value="Joined!"/>
 </form>

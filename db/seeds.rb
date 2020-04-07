@@ -1,10 +1,10 @@
 require_relative( "../models/customers.rb" )
-require_relative( "../models/instructors.rb" )
+require_relative( "../models/bookings.rb" )
 require_relative( "../models/fitness.rb" )
 require("pry-byebug")
 
 Customer.delete_all()
-Instructor.delete_all()
+Bookings.delete_all()
 Fitness.delete_all()
 
 customer1 = Customer.new({
