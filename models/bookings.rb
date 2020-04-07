@@ -32,21 +32,21 @@ class Bookings
     return results.map { |bookings| Bookings.new( booking ) }
   end
 
-  def fitness()
-    sql = "SELECT * FROM fitness
+  def fitness_classes()
+    sql = "SELECT * FROM fitness_class
     WHERE id = $1"
     values = [@fitness_id]
     results = SqlRunner.run( sql, values )
     return Fitness.new( results.first )
   end
 
-  def instructor()
-    sql = "SELECT * FROM instructor
-    WHERE id = $1"
-    values = [@instructor_id]
-    results = SqlRunner.run( sql, values )
-    return Instructor.new( results.first )
-  end
+  # def instructor()
+  #   sql = "SELECT * FROM instructor
+  #   WHERE id = $1"
+  #   values = [@instructor_id]
+  #   results = SqlRunner.run( sql, values )
+  #   return Instructor.new( results.first )
+  # end
 
   def self.delete_all()
     sql = "DELETE FROM customers"

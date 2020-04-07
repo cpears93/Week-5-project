@@ -2,12 +2,11 @@ require_relative( '../db/sql_runner' )
 
 class Fitness
 
-  attr_reader( :customer_id, :instructor_id, :id)
+  attr_reader( :lesson_name, :id)
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
-    @customer_id = options['name']
-    @instructor_id = options['instructor'].to_i
+    @lesson_name = options['lesson_name'].to_i
   end
 
   def save()
@@ -21,7 +20,7 @@ class Fitness
       $1, $2
     )
     RETURNING id"
-    values = [@customer_id, @instructor_id]
+    values = [@customer_id, @fitness_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
