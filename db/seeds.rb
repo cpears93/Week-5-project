@@ -74,25 +74,25 @@ bookings4.save()
 
 
 fitness_class1 = Fitness_class.new({
-  "lesson_name" = lesson_name1.id
+  "lesson_name" => lesson_name1.id
   })
 
 fitness_class1.save()
 
 fitness_class2 = Fitness_class.new({
-  "lesson_name" = lesson_name2.id
+  "lesson_name" => lesson_name2.id
   })
 
 fitness_class2.save()
 
 fitness_class3 = Fitness_class.new({
-  "lesson_name" = lesson_name3.id
+  "lesson_name" => lesson_name3.id
   })
 
 fitness_class3.save()
 
 fitness_class4 = Fitness_class.new({
-  "lesson_name" = lesson_name4.id
+  "lesson_name" => lesson_name4.id
   })
 
 fitness_class4.save()
