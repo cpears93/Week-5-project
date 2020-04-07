@@ -1,4 +1,4 @@
-<h1>Instructor</h1>
+<h1>Bookings</h1>
 
 <table>
   <tr>
@@ -6,9 +6,9 @@
     <th></th>
     <th>fitness_class</th>
   </tr>
-  <% for instructor in @instructor %>
+  <% for booking in @bookings %>
   <tr>
-    <td><a href="/instructor/<%= instructor.id %>"><%= instructor.name %></a></td>
+    <td><a href="/bookings/<%= bookings.id %>"><%= bookings.name %></a></td>
     <td>|</td>
     <td><%= fitness_class.type %></td>
   </tr>
