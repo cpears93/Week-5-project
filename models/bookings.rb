@@ -6,8 +6,8 @@ class Bookings
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
-    @fitness_id = options['fitness_id'].to_i
-    @customer_id = options['customer_id'].to_i
+    @fitness_id = options['fitness_id']
+    @customer_id = options['customer_id']
   end
 
   def save()
