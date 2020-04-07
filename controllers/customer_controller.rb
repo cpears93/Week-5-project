@@ -7,12 +7,12 @@ require_relative( '../models/instructors.rb' )
 also_reload( '../models/*' )
 
 get '/customers' do
-  @customer = Customer.all
-  erb(:"customers/new")
+  @customers = Customer.all
+  erb(:"customers/index")
 end
 
 get '/customers/new' do
-  @customer = Customer.all
+  @customers = Customer.all
   erb(:"customers/new")
 end
 

@@ -11,7 +11,7 @@ class Fitness
   end
 
   def save()
-    sql = "INSERT INTO fitness
+    sql = "INSERT INTO fitness_class
     (
       customer_id,
       insructor_id
@@ -34,13 +34,13 @@ class Fitness
   end
 
   def self.all()
-    sql = "SELECT * FROM fitness"
+    sql = "SELECT * FROM fitness_class"
     results = SqlRunner.run( sql )
     return results.map { |fitness| Fitness.new( fitness ) }
   end
 
   def self.find()
-    sql = "SELECT * FROM fitness
+    sql = "SELECT * FROM fitness_class
     WHERE id = $1"
     values = [id]
     results = SqlRunner.run( sql, values )
@@ -48,7 +48,7 @@ class Fitness
   end
 
   def self.delete_all
-    sql = "DELETE FROM fitness"
+    sql = "DELETE FROM fitness_class"
     SqlRunner.run( sql )
   end
 
