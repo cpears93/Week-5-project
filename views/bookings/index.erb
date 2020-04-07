@@ -1,16 +1,19 @@
 <h1>Bookings</h1>
 
-<table>
-  <tr>
-    <th>first_name</th>
-    <th></th>
-    <th>fitness_class</th>
-  </tr>
-  <% for booking in @bookings %>
-  <tr>
-    <td><a href="/bookings/<%= bookings.id %>"><%= bookings.name %></a></td>
-    <td>|</td>
-    <td><%= fitness_class.type %></td>
-  </tr>
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/bookings/show">Bookings</a>
+</p>
+
+<ul>
+  <% for fitness in @lesson_name %>
+  <li>
+  <p><%= fitness_class.lesson_name %>
+  </p>
+    <p>
+      <form action="/fitness_class/<%= fitness_class.id %>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
   <% end %>
-</table>
+</ul>
