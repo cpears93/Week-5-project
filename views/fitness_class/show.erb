@@ -1,18 +1,6 @@
-<h1>Customer</h1>
+<h1>Fitness Class</h1>
 
-<p class="btn--wrapper">
-  <a class="btn btn--action" href="/fitness/show">Book a Class!!!</a>
-</p>
+<form action="/fitness_class" method="POST">
 
-<ul>
-  <% for fitness_class in @fitness_class %>
-  <li>
-  <p><%= fitness_class.lesson_name %></p>
-    <p>
-      <form action="/fitness/<%= fitness.id %>/delete" method="POST">
-        <input class="btn btn--danger" type="submit" value="delete" />
-      </form>
-    </p>
-  </li>
-  <% end %>
-</ul>
+  <p><label for="lesson-name">Lesson Name:</label>
+    <input id="lesson_name" type="text" name="lesson_name" required/></p>
