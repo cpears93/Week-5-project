@@ -1,6 +1,6 @@
 DROP TABLE fitness_class;
 DROP TABLE customers;
-DROP TABLE instructors;
+DROP TABLE bookings;
 
 CREATE TABLE customers
 (
@@ -16,7 +16,7 @@ CREATE TABLE instructors
   type VARCHAR(255)
 );
 
-CREATE TABLE fitness_class
+CREATE TABLE bookings
 (
   id SERIAL primary key,
   customer_id INT references customers(id),
