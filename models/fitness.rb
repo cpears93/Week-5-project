@@ -6,21 +6,20 @@ class Fitness
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
-    @lesson_name = options['lesson_name'].to_i
+    @lesson_name = options['lesson_name']
   end
 
   def save()
     sql = "INSERT INTO fitness_class
     (
-      customer_id,
-      insructor_id
+      lesson_name
     )
     VALUES
     (
-      $1, $2
+      $1
     )
     RETURNING id"
-    values = [@customer_id, @fitness_id]
+    values = [@lesson_name]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end

@@ -3,7 +3,6 @@ require( 'sinatra/contrib/all')
 require( 'pry-byebug')
 require_relative( '../models/customers.rb' )
 require_relative( '../models/fitness.rb' )
-require_relative( '../models/instructors.rb' )
 also_reload( '../models/*' )
 
 get '/customers' do
@@ -16,13 +15,13 @@ get '/customers/new' do
   erb(:"customers/new")
 end
 
-post '.customers' do
-  customers = Customers.new(params)
+post '/customers' do
+  customers = Customer.new(params)
   customers.save
   redirect to("/customers")
 end
 
 post '/customers/:id/delete' do
-  Customers.destroy(params[:id])
+  Customer.destroy(params[:id])
   redirect to("/customers")
 end

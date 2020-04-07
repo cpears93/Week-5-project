@@ -2,26 +2,30 @@ require_relative( '../db/sql_runner' )
 
 class Customer
 
-  attr_reader( :fitness_id, :insructor_id, :id )
+  attr_accessor( :first_name, :last_name, :age, :gender, :id )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
-    @fitness_id = options['fitness_id'].to_i
-    @instructor_id = options['instructor_id'].to_i
+    @first_name = options['first_name']
+    @last_name = options['last_name']
+    @age = options['age'].to_i
+    @gender = options['gender']
   end
 
   def save()
     sql = "INSERT INTO customers
     (
-      fitness_id,
-      instructor_id
+      first_name,
+      last_name,
+      age,
+      gender
     )
     VALUES
     (
-      $1, $2
+      $1, $2, $3, $4
     )
     RETURNING id"
-    values = [@fitness_id, @instructor_id]
+    values = [@first_name, @last_name, @age, @gender]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end

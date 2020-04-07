@@ -7,9 +7,13 @@
 <ul>
   <% for customers in @customers %>
   <li>
-  <p><%= customers.name %> <%= @actions.sample %> <%= customers.fitness_class.name %> </p>
+  <p><%= customers.first_name %>
+     <%= customers.last_name %>
+     <%= customers.age %>
+     <%= customers.gender %>
+  </p>
     <p>
-      <form action="/customer/<%= customer.id %>/delete" method="POST">
+      <form action="/customers/<%= customers.id %>/delete" method="POST">
         <input class="btn btn--danger" type="submit" value="delete" />
       </form>
     </p>
