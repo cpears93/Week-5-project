@@ -1,14 +1,14 @@
 require( 'sinatra')
 require( 'sinatra/contrib/all')
-require_relative( '../models/instructors.rb' )
+require_relative( '../models/bookings.rb' )
 also_reload( '../models/*' )
 
-get '/instructor' do
-  @instructor = Instructor.all()
-  ern ( :"instructor/index")
+get '/bookings' do
+  @bookings = Bookings.all()
+  ern ( :"bookings/index")
 end
 
-get 'insructor/:id' do
-  @instructor = Instructor.find(params['id'].to_i)
-  erb (:"instructor/show")
+get 'bookings/:id' do
+  @bookings = Bookings.find(params['id'].to_i)
+  erb (:"bookings/show")
 end
