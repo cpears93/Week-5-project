@@ -2,6 +2,15 @@
 
 <form action="/customer" method="post">
   <label>
+  Select an instructor:
+    <select name="instructor_id">
+      <% for instructor in @instructors %>
+      <option value="<%= instructor.id %>"><%= instructor.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <label>
     Select a fitness class:
     <select name="fitness_class_id">
       <% for fitness_class in @fitness_class %>
