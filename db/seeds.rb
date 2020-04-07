@@ -44,62 +44,58 @@ customer4 = Customer.new({
 customer4.save()
 
 
-insructor1 = Instructor.new({
-  "instructor_name" => "Jack",
-  "fitness_class" => "Spin"
-  })
-
-instructor1.save()
-
-instructor2 = Instructor.new({
-  "insructor_name" => "Victor",
-  "fitness_class" => "Rowing"
-  })
-
-instructor2.save()
-
-instructor3 = Instructor.new({
-  "instructor_name" => "Tam",
-  "fitness_class" => "Kickboxing"
-  })
-
-instructor3.save()
-
-instructor4 = Instructor.new({
-  "instructor_name" => "Winston",
-  "fitness_class" => "Weightlifting"
-  })
-
-instructor4.save()
-
-
-class1 = Class.new({
+bookings1 = bookings1.new({
   "customer_id" => customer1.id,
-  "instructor_id" => instructor1.id
+  "fitness_id" => fitness1.id
   })
 
-class1.save()
+bookings1.save()
 
-class2 = Class.new({
-  "customer_id" => customer3.id,
-  "instructor_id" => instructor2.id
-  })
-
-class2.save()
-
-class3 = Class.new({
-  "customer_id" => customer4.id,
-  "instructor_id" => instructor3.id
-  })
-
-class3.save()
-
-class4 = Class.new({
+bookings2 = bookings2.new({
   "customer_id" => customer2.id,
-  "instructor_id" => instructor4.id
+  "fitness_id" => fitness2.id
   })
 
-class4.save()
+bookings2.save()
+
+bookings3 = bookings3.new({
+  "customer_id" => customer3.id,
+  "fitness_id" => fitness3.id
+  })
+
+bookings3.save()
+
+bookings4 = bookings4.new({
+  "customer_id" => customer4.id,
+  "fitness_id" => fitness4.id
+  })
+
+bookings4.save()
+
+
+fitness_class1 = Fitness_class.new({
+  "lesson_name" = lesson_name1.id
+  })
+
+fitness_class1.save()
+
+fitness_class2 = Fitness_class.new({
+  "lesson_name" = lesson_name2.id
+  })
+
+fitness_class2.save()
+
+fitness_class3 = Fitness_class.new({
+  "lesson_name" = lesson_name3.id
+  })
+
+fitness_class3.save()
+
+fitness_class4 = Fitness_class.new({
+  "lesson_name" = lesson_name4.id
+  })
+
+fitness_class4.save()
 
 binding.pry
 nil
