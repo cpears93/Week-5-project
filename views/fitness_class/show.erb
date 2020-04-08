@@ -1,7 +1,9 @@
-<h1>Fitness <%= @fitness.name %></h1>
+<h1>Fitness Class</h1>
 
-<ul>
-  <% @fitness.lesson_name.each do |lesson_name| %>
-  <li><%= lesson_name.name %></li>
-  <% end %>
-</ul>
+<form action="/fitness" method="POST">
+
+  <p><label for="lesson-name">First Name:</label>
+    <input id="lesson_name" type="text" name="lesson_name" required/></p>
+
+  <input type="submit" value="Select Class!"/>
+</form>
