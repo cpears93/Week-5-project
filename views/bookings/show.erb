@@ -1,9 +1,23 @@
-<h1>Bookings <%= @bookings.name %></h1>
+<h1>Book a Class</h1>
 
-<p>Type: <%= @customer.type %></p>
+<form action="/bookings/show" method="post">
+  <label>
+  Select a Customer:
+    <select name="customer_id">
+      <% for customer in @customers %>
+      <option value="<%= customer.id %>"><%= customer.name %></option>
+      <% end %>
+    </select>
+  </label>
 
-<ul>
-  <% @bookings.fitness_class.each do |fitness_class| %>
-  <li><%= bookings.name %></li>
-  <% end %>
-</ul>
+  <label>
+    Select a Fitness Class:
+    <select name="fitness_class">
+      <% for fitness_class in @fitness %>
+      <option value="<%= fitness_class.id %>"><%= fitness_class.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <input class="btn btn--action" type='submit' value="Join!">
+</form>

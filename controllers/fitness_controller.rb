@@ -8,7 +8,7 @@ get '/fitness' do
   erb (:"fitness_class/index")
 end
 
-get 'fitness/:id' do
+get '/fitness/:id' do
   @fitness = Fitness.find(params['id'].to_i)
   erb (:"fitness_class/show")
 end
