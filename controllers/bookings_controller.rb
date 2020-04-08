@@ -8,7 +8,7 @@ get '/bookings' do
   erb ( :"bookings/index")
 end
 
-get 'bookings/:id' do
+get '/bookings/:id' do
   @bookings = Bookings.find(params['id'].to_i)
   erb (:"bookings/show")
 end
