@@ -5,7 +5,7 @@ also_reload( '../models/*' )
 
 get '/bookings' do
   @bookings = Bookings.all()
-  ern ( :"bookings/index")
+  erb ( :"bookings/index")
 end
 
 get 'bookings/:id' do
