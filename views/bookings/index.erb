@@ -7,7 +7,7 @@
 <ul>
   <% for bookings in @bookings %>
   <li>
-  <p> <%= bookings.fitness_class.lesson_name %>
+  <p> <%= bookings.customer_id.fitness_class.lesson_name %>
   </p>
     <p>
       <form action="/bookings/<%= bookings.id %>/delete" method="POST">
