@@ -1,6 +1,6 @@
 require_relative( '../db/sql_runner' )
 
-class Bookings
+class Booking
 
   attr_reader( :fitness_id, :customer_id, :id )
 
@@ -29,7 +29,7 @@ class Bookings
   def self.all()
     sql = "SELECT * FROM bookings"
     results = SqlRunner.run( sql )
-    return results.map { |bookings| Bookings.new( bookings ) }
+    return results.map { |bookings| Booking.new( bookings ) }
   end
 
   def customers()

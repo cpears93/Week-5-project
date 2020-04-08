@@ -1,11 +1,11 @@
 <h1>Book a Class</h1>
 
-<form action="/bookings/show" method="post">
+<form action="/bookings" method="post">
   <label>
   Select a Customer:
     <select name="customer_id">
       <% for customer in @customers %>
-      <option value="<%= customer.id %>"><%= customer.name %></option>
+      <option value="<%= customer.id %>"><%= customer.first_name %> <%= customer.last_name %></option>
       <% end %>
     </select>
   </label>
@@ -14,7 +14,7 @@
     Select a Fitness Class:
     <select name="fitness_class">
       <% for fitness_class in @fitness %>
-      <option value="<%= fitness_class.id %>"><%= fitness_class.name %></option>
+      <option value="<%= fitness_class.id %>"><%= fitness_class.lesson_name %></option>
       <% end %>
     </select>
   </label>

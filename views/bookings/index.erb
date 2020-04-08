@@ -1,4 +1,4 @@
-<h1>Bookings</h1>
+<h1>Booking</h1>
 
 <p class="btn--wrapper">
   <a class="btn btn--action" href="/bookings/show">Book a Class</a>
@@ -7,7 +7,7 @@
 <ul>
   <% for bookings in @bookings %>
   <li>
-  <p><%= bookings.bookings_name %>
+  <p><%= bookings.fitness.lesson_name %>
   </p>
     <p>
       <form action="/bookings/<%= bookings.id %>/delete" method="POST">

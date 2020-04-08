@@ -4,7 +4,7 @@ require_relative( "../models/fitness.rb" )
 require("pry-byebug")
 
 Customer.delete_all()
-Bookings.delete_all()
+Booking.delete_all()
 Fitness.delete_all()
 
 customer1 = Customer.new({
@@ -67,28 +67,28 @@ fitness_class4 = Fitness.new({
 
 fitness_class4.save()
 
-bookings1 = Bookings.new({
+bookings1 = Booking.new({
   "customer_id" => customer1.id,
   "fitness_id" => fitness_class1.id
   })
 
 bookings1.save()
 
-bookings2 = Bookings.new({
+bookings2 = Booking.new({
   "customer_id" => customer2.id,
   "fitness_id" => fitness_class2.id
   })
 
 bookings2.save()
 
-bookings3 = Bookings.new({
+bookings3 = Booking.new({
   "customer_id" => customer3.id,
   "fitness_id" => fitness_class3.id
   })
 
 bookings3.save()
 
-bookings4 = Bookings.new({
+bookings4 = Booking.new({
   "customer_id" => customer4.id,
   "fitness_id" => fitness_class4.id
   })
