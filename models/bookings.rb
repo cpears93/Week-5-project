@@ -37,7 +37,7 @@ class Booking
     WHERE id = $1"
     values = [@customer_id]
     results = SqlRunner.run( sql, values )
-    return Customers.new( results.first )
+    return Customer.new( results.first )
   end
 
   def fitness_classes()
@@ -49,12 +49,12 @@ class Booking
   end
 
   def self.delete_all()
-    sql = "DELETE FROM customers"
+    sql = "DELETE FROM bookings"
     SqlRunner.run( sql )
   end
 
   def self.destroy(id)
-    sql = "DELETE FROM customers
+    sql = "DELETE FROM bookings
     WHERE id = $1"
     values = [id]
     SqlRunner.run( sql, values )

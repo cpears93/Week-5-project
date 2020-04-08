@@ -12,7 +12,7 @@
 
   <label>
     Select a Fitness Class:
-    <select name="fitness_class">
+    <select name="fitness_id">
       <% for fitness_class in @fitness %>
       <option value="<%= fitness_class.id %>"><%= fitness_class.lesson_name %></option>
       <% end %>

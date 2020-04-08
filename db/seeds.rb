@@ -3,8 +3,8 @@ require_relative( "../models/bookings.rb" )
 require_relative( "../models/fitness.rb" )
 require("pry-byebug")
 
-Customer.delete_all()
 Booking.delete_all()
+Customer.delete_all()
 Fitness.delete_all()
 
 customer1 = Customer.new({
